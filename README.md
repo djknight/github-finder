@@ -1,4 +1,4 @@
-React App to find Github Users!
+React App to find Github Users! Made in React
 
 vs 0.0.01 
 added temp useres 
