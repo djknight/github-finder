@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Navbar from "./Components/layout/Navbar";
 import Users from "./Components/users/Users";
+import Search from "./Components/users/Search";
 import axios from "axios";
 import "./App.css";
 
@@ -23,6 +24,7 @@ class App extends Component {
       <div className="App">
         <Navbar /> {/*Static Default Nav*/}
         <div className="container">
+          <Search /> {/*Search Component*/}
           <Users loading={this.state.loading} users={this.state.users} />
         </div>
       </div>
