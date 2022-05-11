@@ -6,3 +6,6 @@ added temp useres
 
 vs 0.0.02
 removed temp users added api.github.useres top 30
+
+vs 0.0.03
+added serch added form/submit / events (yet to work & serch github)
