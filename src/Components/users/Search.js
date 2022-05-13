@@ -8,6 +8,7 @@ export class search extends Component {
   onSubmit = (e) => {
     e.preventDefault();
     this.props.searchUsers(this.state.Text);
+    this.setState({ Text: "" });
   };
   //event para
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
