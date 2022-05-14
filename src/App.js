@@ -20,7 +20,7 @@ class App extends Component {
   //   this.setState({ users: res.data, loading: false });
   // }npm
 
-  //serch GitHub users
+  //Search GitHub users
 
   // searchUsers = async (text) => {
   //   const res = await axios.get(
@@ -28,7 +28,7 @@ class App extends Component {
   //   );
   //   this.setState({ users: res.data.items, loading: false });
 
-  //serch GitHub users 10 searches per min limit if more Auth required.
+  //Search GitHub users 10 Searches per min limit if more Auth required.
 
   searchUsers = async (text) => {
     this.setState({ loading: true });
