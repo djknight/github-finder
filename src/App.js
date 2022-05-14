@@ -28,7 +28,7 @@ class App extends Component {
   //   );
   //   this.setState({ users: res.data.items, loading: false });
 
-  //
+  //serch GitHub users 10 searches per min limit if more Auth required.
 
   searchUsers = async (text) => {
     this.setState({ loading: true });
