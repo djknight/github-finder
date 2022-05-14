@@ -10,16 +10,15 @@ class App extends Component {
     users: [],
     loading: false,
   };
+  //the top 30 users are fetched from the github api
 
   // async componentDidMount() {
   //   this.setState({ loading: true });
-
   //   const res = await axios.get(
   //     `https://api.github.com/users?client_id=${process.env.REACT_APP_GITHUB_CLIENT_ID}&client_secret=${process.env.REACT_APP_GITHUB_CLIENT_SECRET}`
   //   );
-
   //   this.setState({ users: res.data, loading: false });
-  // }
+  // }npm
 
   //serch GitHub users
 
@@ -35,14 +34,13 @@ class App extends Component {
     this.setState({ loading: true });
 
     const res = await axios.get(
-      `https://api.github.com/search/users?q=${text}`,
-      {
-        headers: {
-          Authorization: `${process.env.REACT_APP_GITHUB_TOKEN}`,
-        },
-      }
+      `https://api.github.com/search/users?q=${text}`
+      // {
+      //   headers: {
+      //     Authorization: `Bearer ${process.env.REACT_APP_GITHUB_TOKEN}`,
+      //   },
+      // }
     );
-
     this.setState({ users: res.data.items, loading: false });
   };
 

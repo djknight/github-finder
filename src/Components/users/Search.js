@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 export class search extends Component {
   state = {
-    Text: "",
+    text: "",
   };
   //submit the form
   onSubmit = (e) => {
     e.preventDefault();
-    this.props.searchUsers(this.state.Text);
-    this.setState({ Text: "" });
+    this.props.searchUsers(this.state.text);
+    this.setState({ text: "" });
   };
   //event para
   onChange = (e) => this.setState({ [e.target.name]: e.target.value });
