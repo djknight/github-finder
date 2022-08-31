@@ -1,7 +1,11 @@
 import React from "react";
-import PropTypes from "prop-types";
 
-const Navbar = ({ icon, title }) => {
+interface Props {
+  icon: string;
+  title: string;
+}
+
+const Navbar = ({ icon, title }: Props) => {
   return (
     <nav className="navbar bg-primary">
       <h1>
@@ -13,10 +17,6 @@ const Navbar = ({ icon, title }) => {
 Navbar.defaultProps = {
   title: "Github Finder",
   icon: "fab fa-github",
-};
-Navbar.propTypes = {
-  title: PropTypes.string.isRequired,
-  icon: PropTypes.string.isRequired,
 };
 
 export default Navbar;

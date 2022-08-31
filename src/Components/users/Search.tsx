@@ -1,17 +1,26 @@
 import React, { Component } from "react";
 
-export class search extends Component {
+interface Props {
+  searchUsers: (text: string) => any;
+}
+
+interface State {
+  text: string;
+}
+
+export class search extends Component<Props, State> {
   state = {
     text: "",
   };
   //submit the form
-  onSubmit = (e) => {
+  onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     this.props.searchUsers(this.state.text);
     this.setState({ text: "" });
   };
   //event para
-  onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  onChange = (e: React.ChangeEvent<HTMLInputElement>) =>
+    this.setState({ text: e.target.value });
 
   render() {
     return (

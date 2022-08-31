@@ -4,8 +4,14 @@ import Users from "./Components/users/Users";
 import Search from "./Components/users/Search";
 import axios from "axios";
 import "./App.css";
+import { User } from "./types";
 
-class App extends Component {
+interface State {
+  users: User[];
+  loading: boolean;
+}
+
+class App extends Component<{}, State> {
   state = {
     users: [],
     loading: false,
@@ -30,7 +36,7 @@ class App extends Component {
 
   //Search GitHub users 10 Searches per min limit if more Auth required.
 
-  searchUsers = async (text) => {
+  searchUsers = async (text: string) => {
     this.setState({ loading: true });
 
     const res = await axios.get(
